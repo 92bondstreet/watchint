@@ -1,0 +1,18 @@
+{
+  "name": "watchint",
+  "description": "Watchint = Watch + Jshint. Tasks between Jshint and watch *.js files.",
+  "version": "1.0.0",
+  "private": true,
+  "homepage" : "https://github.com/92bondstreet/watchint",
+  "author" : {
+    "name" : "Yassine AZZOUT",
+    "email" : "yassine.azzout@gmail.com"
+  }
+  ,"dependencies": {
+    "grunt" : "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-watch": "*",
+    "jshint-stylish": "*",
+    "chalk": "*"
+  }
+}
