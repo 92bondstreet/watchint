@@ -12,7 +12,6 @@
     "grunt" : "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-watch": "*",
-    "jshint-stylish": "*",
     "chalk": "*"
   }
 }
