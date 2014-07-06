@@ -48,7 +48,7 @@ module.exports = function(grunt) {
       }
     }
     ,eslint: {                               
-        target: ['/Users/92bondstreet/Web Development/2014/demographics/js/AgeRange.js']              
+        target: [jsPath]              
     }
   });
 
