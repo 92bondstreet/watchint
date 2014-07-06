@@ -1,7 +1,7 @@
 WATCHINT
 =========
 
-watchint is a basic script to monitor files with [watch](https://github.com/gruntjs/grunt-contrib-watch) and detect potential errors with [JSHint](https://github.com/gruntjs/grunt-contrib-jshint).
+watchint is a basic script to monitor files with [watch](https://github.com/gruntjs/grunt-contrib-watch) and detect potential errors with [JSHint](https://github.com/gruntjs/grunt-contrib-jshint) and [ESLint](https://github.com/eslint/eslint).
 
 
 Installation
@@ -31,7 +31,7 @@ If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out th
 
 
 ## Watchint task
-_Run this task with the `grunt --js {path} --config {path}` command._
+_Run this task with the `grunt --js {path} --jsconfig {path} --esconfig {path}` command._
 
 
 ### --js option
@@ -41,13 +41,33 @@ Default: `null`
 
 Define javascript files to watch and to detect errors with JSHint.
 
-### --config option
+### --jsconfig option
 
-Type: `String` 
+Type: `String`	
 Default: `null`
 
 Define path for `.jshintrc` file.
 
+### --esconfig option
+
+Type: `String` 	
+Default: `null`
+
+Define path for `eslint.json` file.
+
+### --mode option
+
+Type: `String` 	
+Default: `jshint`	
+Value: `jshint | eslint | both`
+
+Define linter tasks: jshint only, eslint only or both.
+
+### --notifiy option
+
+Default: `false`	
+
+Display notification.
 
 Project status
 --------------
