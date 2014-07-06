@@ -15,6 +15,7 @@
     "jshint-stylish": "*",
     "grunt-eslint": "*",
     "grunt-continue": "*",
+    "grunt-notify": "*",
     "chalk": "*"
   }
 }

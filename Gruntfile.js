@@ -9,12 +9,12 @@ module.exports = function(grunt) {
   var MODE_JSHINT = 'jshint';
   var MODE_ESLINT = 'eslint';
 
-
   // Get arguments: js files path and .jshintrc path
   var jsPath = grunt.option('js') || null;
   var jsconfig = grunt.option('jsconfig') || null;
   var esconfig = grunt.option('esconfig') || null;
   var mode = grunt.option('mode') || MODE_JSHINT;
+  var notify = grunt.option('notify') || false;
 
   // Define tasks for watch
   // By default, use JSHINT linter
@@ -65,6 +65,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-eslint');
   grunt.loadNpmTasks('grunt-continue');
+  if(notify === true){
+    grunt.loadNpmTasks('grunt-notify');
+  }
 
   grunt.registerTask('default', ['watch']);
 
