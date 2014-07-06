@@ -19,7 +19,8 @@ module.exports = function(grunt) {
   // Define tasks for watch
   var watchTasks = [MODE_JSHINT];
   if(mode === MODE_BOTH){
-    watchTasks = [MODE_JSHINT,MODE_ESLINT];
+    // force other tasks to continue after failures
+    watchTasks = ['continueOn',MODE_JSHINT,MODE_ESLINT,'continueOff'];
   }
   else if(mode === MODE_ESLINT){
     watchTasks = [MODE_ESLINT];
@@ -56,13 +57,14 @@ module.exports = function(grunt) {
   grunt.config('watch', {
       scripts: {
         files: jsPath
-        ,tasks: ['eslint','jshint']
+        ,tasks: watchTasks
       }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-eslint');
+  grunt.loadNpmTasks('grunt-continue');
 
   grunt.registerTask('default', ['watch']);
 
