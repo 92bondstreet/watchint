@@ -48,8 +48,11 @@ module.exports = function(grunt) {
         src: jsPath
       }
     }
-    ,eslint: {                               
-        target: [jsPath]              
+    ,eslint: {    
+        options: {
+            config: esconfig
+        }                           
+        ,target: [jsPath]              
     }
   });
 
