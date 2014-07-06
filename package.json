@@ -12,6 +12,8 @@
     "grunt" : "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-watch": "*",
+    "jshint-stylish": "*",
+    "grunt-eslint": "*",
     "chalk": "*"
   }
 }
