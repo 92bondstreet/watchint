@@ -17,7 +17,9 @@ module.exports = function(grunt) {
   var mode = grunt.option('mode') || MODE_JSHINT;
 
   // Define tasks for watch
+  // By default, use JSHINT linter
   var watchTasks = [MODE_JSHINT];
+
   if(mode === MODE_BOTH){
     // force other tasks to continue after failures
     watchTasks = ['continueOn',MODE_JSHINT,MODE_ESLINT,'continueOff'];
@@ -25,8 +27,6 @@ module.exports = function(grunt) {
   else if(mode === MODE_ESLINT){
     watchTasks = [MODE_ESLINT];
   }
-
-  console.log(watchTasks);
 
   // Wording and missing parameters errors
   var missingJsPath = error('Please use grunt --js {path} where {path} is the path of .*js files to watch and jshint');
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     return false;
   }
 
-  // Task definition
+  // Linter Tasks definition
   grunt.initConfig({
 
     jshint: {
